@@ -5,8 +5,8 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
-import { HomeComponent } from './home/home.component';
-import { TarefasComponent } from './tarefas/tarefas.component';
+import { MarmoreHomeComponent } from './marmore-home/marmore-home.component';
+import { MarmoreTarefasComponent } from './marmore-tarefas/marmore-tarefas.component';
 import { MarmoreTasksServiceService } from './marmore-tasks-service.service';
 
 @NgModule({
@@ -16,12 +16,17 @@ import { MarmoreTasksServiceService } from './marmore-tasks-service.service';
     RouterModule.forRoot([
       {
         path: '',
-        component: HomeComponent,
+        component: MarmoreHomeComponent,
       },
-      { path: 'tarefas', component: TarefasComponent },
+      { path: 'tarefas', component: MarmoreTarefasComponent },
     ]),
   ],
-  declarations: [AppComponent, HelloComponent, HomeComponent, TarefasComponent],
+  declarations: [
+    AppComponent,
+    HelloComponent,
+    MarmoreHomeComponent,
+    MarmoreTarefasComponent,
+  ],
   bootstrap: [AppComponent],
   providers: [MarmoreTasksServiceService],
 })
